@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './komponente/NavBar';
 import Proizvodi from './komponente/Proizvodi';
 import {BrowserRouter,Routes,Route,Link} from "react-router-dom";
+import Cart from './komponente/Cart';
 
 
 function App() {
@@ -35,7 +36,7 @@ function Oduzmi(title){
     </Routes>
     <Route path="/" element={ <Proizvodi products={products} Dodaj={Dodaj} Oduzmi={Oduzmi}/>}/>
 
-   
+    <Route path="/cart" element={ <Cart products={products}/> }/>
       
       </BrowserRouter>
   );
