@@ -4,8 +4,10 @@ import NavBar from './komponente/NavBar';
 import Proizvodi from './komponente/Proizvodi';
 import {BrowserRouter,Routes,Route,Link} from "react-router-dom";
 import Cart from './komponente/Cart';
+import {useState} from "react";
+import {Img} from 'react-image';
 import Cenovnik from './komponente/Cenovnik';
-
+import PoruciTortu  from './komponente/PoruciTortu';
 function App() {
   const [cartNum, setcartNum] = useState(0);
   const [cartProducts, setcartProducts] = useState([]);
@@ -72,7 +74,8 @@ function Oduzmi(title){
     <Route path="/" element={ <Proizvodi products={products} Dodaj={Dodaj} Oduzmi={Oduzmi}/>}/>
 
     <Route path="/cart" element={ <Cart products={products}/> }/>
-    <Route path="/cenovnik" element={ <Cenovnik/> }/>      
+    <Route path="/cenovnik" element={ <Cenovnik/> }/> 
+    <Route path="/poruciTortu" element={ <PoruciTortu/> }/>     
       </BrowserRouter>
   );
 }
